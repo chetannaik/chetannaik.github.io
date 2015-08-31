@@ -1,0 +1,77 @@
+html, body {
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	color: #444;
+}
+
+#fac_photo {
+	/*padding-bottom: 20px;*/
+}
+
+#wrapper {
+	box-shadow: 0 0 2px #222;
+	-webkit-box-shadow: 0 0 2px #222;
+	-moz-box-shadow: 0 0 2px #222;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	margin:5px 0;
+}
+
+.fac_photo {
+	/*padding-top: 10px;*/
+	/*padding-left: 10px;*/
+	padding-right: 15px;
+	/*padding-bottom: 12px;*/
+}
+
+.img-me {
+	border: 1.5px solid gray;
+	/* box-shadow: #AAA 0px 0px 4px 0px; */
+	float: left;
+}
+
+#htname {
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#htdesc {
+	font-size: 18px;
+	font-weight: 300;
+	margin-top: -6px;
+}
+
+#htem {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+mybold {
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.svgico {
+	display: inline-block;
+	padding-right: 7px;
+}
+
+#icons {
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.content {
+	font-size: 16px;
+	font-weight: 300;
+	padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.mybtn-primary {
+    /*color:#fff;*/
+    color:#666;
+    background-color:#EEE;
+    border-color:#DDD
+}

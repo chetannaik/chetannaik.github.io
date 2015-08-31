@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Chetan Naik">
+    <title>Chetan Naik</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    
+    <!-- My CSS -->
+    <link href="defaultstyles.css" rel="stylesheet" media="screen">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500" rel="stylesheet" type="text/css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58769019-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="header">
+        <div class="fac_photo" style="float: left;">
+          <img src="files/me.jpg" height="120" title="photo" id="fac_photo" class="img-circle img-me">
+        </div>
+        <div class="fac_photo" style="height: 140px">
+        <div id="headertext">
+          <div id="htname">Chetan Naik</div>
+          <div id="htdesc">Graduate Student at Stony Brook University</div>
+          <div id="htem">cnaik _at_ cs.stonybrook.edu</div>
+          <div id="icons">
+            <div class="svgico">
+              <a href="http://www.linkedin.com/in/chetannagarajnaik" target="_blank"><img src="files/linkedin.png" height="26px"></a>
+            </div>
+            <div class="svgico">
+              <a href="https://github.com/chetannaik" target="_blank"><img src="files/git.png" height="26px"></a>
+            </div>            
+            <div class="svgico">
+              <a href="https://plus.google.com/+ChetanNaikN/posts" target="_blank"><img src="files/gplus.png" height="26px"></a>
+            </div>
+            <div class="svgico">
+              <a href="https://twitter.com/chetannnaik" target="_blank"><img src="files/twitter.png" height="26px"></a>
+            </div>
+          </div>
+        </div>
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="navbar-brand" href="#">Brand</a> -->
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="research.html">Reseach</a></li>
+              <li class="active"><a href="projects.html">Projects</a></li>
+              <li><a href="misc.html">Misc</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>            
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h3 class="panel-title">Question Answering System</h3>
+          </div>
+          <div class="panel-body">
+            <p>The goal of this project is to build a question answering system that performs textual reasoning to answer and pass a 4th grade science exam.</p>
+            <p>The baseline solution uses word overlap between question and answer sentences to predict the probable anaswer. The scoring is done by dividing number of common tokens between question and answer sentences with number of tokens in the question sentence. This system answered 48% of the questions.</p>
+            <p>
+              <ol>
+                  <li><mybold>Role Aligner:</mybold> Run SRL on question and answer sentences and align the roles in the question with roles in the answer using textual entailment score. This system answered 62.5% of the questions.</li>
+                  <li><mybold>Jacana Align:</mybold> Use Conditional Random Field based token alignment using <a href="http://cs.jhu.edu/~xuchen/paper/yao-jacana-wordalign-acl2013.pdf" target="_blank">Jacana Aligner</a>. This system answered 44% of the questions (<i>One of the reasons for low accurcay is that the system was trained on news corpus while questions in the dataset were regarding biological processes</i>).</li>
+              </ol>
+            </p>
+            <a class="btn mybtn-primary btn-xs" target="_blank" href="https://github.com/chetannaik/question_answering_system">Code</a>  <a class="btn mybtn-primary btn-xs" target="_blank" href="https://docs.google.com/presentation/d/1hXJYLTANbHb7J7B0Zkh1y59YitNOLKGipX6Uj67EIus/embed?start=false&loop=false&delayms=3000">Presentation</a>
+          </div>
+      </div>
+
+
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h3 class="panel-title">Predicting the Super Bowl and College Football Champions of 2015</h3>
+          </div>
+          <div class="panel-body">
+            <p>The goal of this project is to build machine learning models to predict the winners of 2015 Super Bowl and the College Football Championship using historical data.</p>
+            <p>We have predicted the outcome of football matches entirely using the knowledge of previous game statistics. We have used three different models to do this:</p>
+            <ol>
+                <li><mybold>Baseline model:</mybold>  "Point Score Difference Model". In this model we use the score difference to predict winners of future games.</li>
+                <li><mybold>Linear Regression Model:</mybold> In this model, we use linear regression to predict the point difference for each game.</li>
+                <li><mybold>PageRank Model:</mybold> Here, we model the game data as a graph with nodes as teams and edges as score differences between the teams. We then use PageRank on this game graph to rank all the teams. This ranking is used to predict winners of future games.</li>
+            </ol>
+            
+            <p>More information about the project can be found <a target="_blank" href="http://www3.cs.stonybrook.edu/~skiena/591/final_projects/football/">here</a>.</p>
+            <a class="btn mybtn-primary btn-xs" target="_blank" href="https://github.com/chetannaik/predict-nfl-champions">Code</a>  <a class="btn mybtn-primary btn-xs" target="_blank" href="files/data_science_report.pdf">Report</a>
+          </div>
+      </div>
+
+
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h3 class="panel-title">Predicting Yelp review rating stars from review text</h3>
+          </div>
+          <div class="panel-body">
+            <p>The goal of this project is to predict reviews' star ratings on Yelp from review text.</p>          
+            <p>We have built the following models that perform text analysis on review data to predict the rating stars.</p>          
+            <ol>
+                <li><mybold>Baseline Model:</mybold> The most common rating, 4 stars, is the rating predicted by this model for all the reviews.</li>
+                <li><mybold>Term Frequency Model:</mybold> In this model we use frequency of word occurrence to predict the review rating.</li>
+                <li><mybold>LDA + Sentiment Model:</mybold> This model predicts rating using Latent Dirichlet Allocation (LDA) with an added sentiment layer by extracting topics and sentiment associated with the review from review text.</li>
+                <li><mybold>NMF + Sentiment Model:</mybold> In this model, we predict review rating using Non-negative Matrix Factorization (NMF) with an added sentiment layer by extracting topics and sentiment associated with the review from review text.</li>
+            </ol>
+            <p>We have achieved an accuracy of 61% in predicting review rating stars.</p>
+            <a class="btn mybtn-primary btn-xs" target="_blank" href="https://github.com/chetannaik/predict-review-rating">Code</a>  <a class="btn mybtn-primary btn-xs" target="_blank" href="files/data_mining_report.pdf">Report</a>
+            <a class="btn mybtn-primary btn-xs" href="https://docs.google.com/presentation/d/19AlHk8KRQs3wUI6pLD7AENMEhdJwMa43dEJxB78CPhQ/embed?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
+          </div>
+      </div>
+
+
+
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h3 class="panel-title">Predicting facial beauty using Convolutional Neural Network (CNN)</h3>
+          </div>
+          <div class="panel-body">
+            <p>Aim of this project is, for every image with a face of a human, rate the beauty of the face, using a Convolutional Neural Network (CNN). This is done without considering any landmark features. Thus, detecting the features, training them, as well as testing would be done using CNN.</p>          
+            <p>We configured a deep learning CNN using <a href="http://caffe.berkeleyvision.org/" target="_blank">Caffe</a> (a fast framework for deep learning) and trained it to classify faces into one of the 5 classes based on facial beauty.</p>          
+            <p>The trained model predicts facial beauty with an accuracy of 50.32%.</p>
+            <a class="btn mybtn-primary btn-xs" target="_blank" href="files/computer_vision_report.pdf">Report</a>  <a class="btn mybtn-primary btn-xs" href="https://docs.google.com/presentation/d/1ibiqRUbZvzrjclYVhk8ex1iTKwjXa7YMN1sOvVFZFm8/embed?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
+          </div>
+      </div>
+      </br>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>
