@@ -9,7 +9,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- My CSS -->
     <link href="defaultstyles.css" rel="stylesheet" media="screen">
 
@@ -47,7 +47,7 @@
             </div>
             <div class="svgico">
               <a href="https://github.com/chetannaik" target="_blank"><img src="files/git.png" height="26px"></a>
-            </div>            
+            </div>
             <div class="svgico">
               <a href="https://plus.google.com/+ChetanNaikN/posts" target="_blank"><img src="files/gplus.png" height="26px"></a>
             </div>
@@ -77,7 +77,7 @@
               <li class="active"><a href="projects.html">Projects</a></li>
               <li><a href="misc.html">Misc</a></li>
               <li><a href="contact.html">Contact</a></li>
-            </ul>            
+            </ul>
           </div>
         </div>
       </nav>
@@ -113,7 +113,7 @@
                 <li><mybold>Linear Regression Model:</mybold> In this model, we use linear regression to predict the point difference for each game.</li>
                 <li><mybold>PageRank Model:</mybold> Here, we model the game data as a graph with nodes as teams and edges as score differences between the teams. We then use PageRank on this game graph to rank all the teams. This ranking is used to predict winners of future games.</li>
             </ol>
-            
+
             <p>More information about the project can be found <a target="_blank" href="http://www3.cs.stonybrook.edu/~skiena/591/final_projects/football/">here</a>.</p>
             <a class="btn mybtn-primary btn-xs" target="_blank" href="https://github.com/chetannaik/predict-nfl-champions">Code</a>  <a class="btn mybtn-primary btn-xs" target="_blank" href="files/data_science_report.pdf">Report</a>
           </div>
@@ -125,8 +125,8 @@
               <h3 class="panel-title">Predicting Yelp review rating stars from review text</h3>
           </div>
           <div class="panel-body">
-            <p>The goal of this project is to predict reviews' star ratings on Yelp from review text.</p>          
-            <p>We have built the following models that perform text analysis on review data to predict the rating stars.</p>          
+            <p>The goal of this project is to predict reviews' star ratings on Yelp from review text.</p>
+            <p>We have built the following models that perform text analysis on review data to predict the rating stars.</p>
             <ol>
                 <li><mybold>Baseline Model:</mybold> The most common rating, 4 stars, is the rating predicted by this model for all the reviews.</li>
                 <li><mybold>Term Frequency Model:</mybold> In this model we use frequency of word occurrence to predict the review rating.</li>
@@ -146,10 +146,32 @@
               <h3 class="panel-title">Predicting facial beauty using Convolutional Neural Network (CNN)</h3>
           </div>
           <div class="panel-body">
-            <p>Aim of this project is, for every image with a face of a human, rate the beauty of the face, using a Convolutional Neural Network (CNN). This is done without considering any landmark features. Thus, detecting the features, training them, as well as testing would be done using CNN.</p>          
-            <p>We configured a deep learning CNN using <a href="http://caffe.berkeleyvision.org/" target="_blank">Caffe</a> (a fast framework for deep learning) and trained it to classify faces into one of the 5 classes based on facial beauty.</p>          
+            <p>Aim of this project is, for every image with a face of a human, rate the beauty of the face, using a Convolutional Neural Network (CNN). This is done without considering any landmark features. Thus, detecting the features, training them, as well as testing would be done using CNN.</p>
+            <p>We configured a deep learning CNN using <a href="http://caffe.berkeleyvision.org/" target="_blank">Caffe</a> (a fast framework for deep learning) and trained it to classify faces into one of the 5 classes based on facial beauty.</p>
             <p>The trained model predicts facial beauty with an accuracy of 50.32%.</p>
             <a class="btn mybtn-primary btn-xs" target="_blank" href="files/computer_vision_report.pdf">Report</a>  <a class="btn mybtn-primary btn-xs" href="https://docs.google.com/presentation/d/1ibiqRUbZvzrjclYVhk8ex1iTKwjXa7YMN1sOvVFZFm8/embed?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
+          </div>
+      </div>
+
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h3 class="panel-title">tMood</h3>
+          </div>
+          <div class="panel-body">
+            <p>This project is developed during <a href="http://bitca.mp/" target="_blank">Bitcamp Hackathon</a>.</p>
+            <p>A Pebble app that analyses the sentiment of people around you using twitter feeds at your location. Backend for this project is developed in Python and hosted in <a href="http://pythonanywhere.com" target="_blank">pythonanywhere.com</a> with Frontend developed in JavaScript.</p>
+            <ul>
+              <li>The backend service uses flask web framework for handling requests. It accepts input requests in the form of a JSON array containing list of place names.</li>
+              <li>This is then used to get the tweets around the list of places.</li>
+              <li>We use sentiment classifier by IBM Alchemy to get the tweet sentiments.</li>
+              <li>Then we randomly select 16 tweets along with their sentiments and return it in JSON format.</li>
+              <li>It is then used to display 16 smileys on the screen of the watch depending on the sentiment of the tweet.</li>
+              <li>On clicking the smiley you can view the complete tweet and also you can shake your watch to view random tweet and ots sentiment</li>
+            </ul>
+
+            <a class="btn mybtn-primary btn-xs" target="_blank" href="https://github.com/chetannaik/tMood">Code</a>
+            <a class="btn mybtn-primary btn-xs" target="_blank" href="https://www.youtube.com/watch?v=PlnMDUieuKc">Demo</a>
+            <a class="btn mybtn-primary btn-xs" target="_blank" href="https://youtu.be/8Api3UESO1c?t=1h53m10s">Video</a>
           </div>
       </div>
       </br>
