@@ -90,7 +90,7 @@
           <div class="panel-body">
             <img class="img-responsive img-thumbnail" style='float:right;width:400px; margin-left:5px;' src="files/qa_img.png" />
             <p>The goal of this project is to build a question answering system that uses alignment over semantic roles to answer and pass a 4th grade science exam.</p>
-            <p>The baseline solution uses word overlap between question and answer sentences to predict the probable anaswer. The scoring is done by dividing number of common tokens between question and answer sentences with number of tokens in the question sentence. This system answered 48% of the questions.</p>
+            <p>The baseline solution uses word overlap between question and answer sentences to predict the probable answer. In this baseline method, scoring is done by dividing number of common tokens between question and answer sentences with number of tokens in the question sentence. This system answered 48% of the questions. I tried the following two methods in order to improve upon the baseline method.</p>
             <p>
               <ol>
                   <li><mybold>Role Aligner:</mybold> Run SRL on question and answer sentences and align the roles in the question with roles in the answer using textual entailment score. This system answered 62.5% of the questions.</li>
