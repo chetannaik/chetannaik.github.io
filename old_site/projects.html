@@ -1,0 +1,192 @@
+<html lang="en">
+
+<head>
+  <title>Chetan Naik</title>
+  <link href="files/bootstrap.css" rel="stylesheet">
+  <link href="files/defaultstyles.css" rel="stylesheet" media="screen">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58769019-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</head>
+
+<body>
+  <div id="main-wrapper">
+    <div id="wrapper">
+      <div class="header">
+        <div class="fac_photo" style="float: left;">
+          <img src="files/me.jpg" height="120" title="photo" id="fac_photo">
+        </div>
+        <div class="fac_photo" style="height: 140px;">
+          <h4>Chetan Naik</h4>
+          <h5>Graduate Student</h5>
+          <h5><a target="_blank" href="https://www.cs.stonybrook.edu/home">Computer Science, Stony Brook University </a></h5>
+          <h5>cnaik at cs dot stonybrook dot edu</h5>
+        </div>
+      </div>
+
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="research.html">Reseach</a></li>
+              <li class="active"><a href="projects.html">Projects</a></li>
+              <li><a href="misc.html">Misc</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" id="content">
+
+        </br>
+        <h4>1. Question Answering System</h4>
+        <div style="padding-left: 20;">
+          The goal of this project is to build a question answering system that performs textual reasoning to answer and pass a 4th grade science exam.
+          </br>
+          </br>
+          The baseline solution uses word overlap between question and answer sentences to predict the probable anaswer. The scoring is done by dividing number of common tokens between question and answer sentences with number of tokens in the question sentence. This system answered 48% of the questions.
+          </br>
+          </br>
+          <ol>
+              <li>Role Aligner: Run SRL on question and answer sentences and align the roles in the question with roles in the answer using textual entailment score. This system answered 62.5% of the questions.</li>
+              <li>Jacana Align: Use Conditional Random Field based token alignment using <a href="http://cs.jhu.edu/~xuchen/paper/yao-jacana-wordalign-acl2013.pdf" target="_blank">Jacana Aligner</a>. This system answered 44% of the questions (<i>One of the reasons for low accurcay is that the system was trained on news corpus while questions in the dataset were regarding biological processes</i>).</li>
+          </ol>
+          <strong>Code:</strong> <a href="https://github.com/chetannaik/question_answering_system" target="_blank"> Link</a>
+          </br>
+          </br>
+          <strong>Presentation:</strong>
+          </br>
+          <iframe src="https://docs.google.com/presentation/d/1hXJYLTANbHb7J7B0Zkh1y59YitNOLKGipX6Uj67EIus/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          </br>
+        </div>
+
+        </br>
+        <h4>2. Predicting the Super Bowl and College Football Champions of 2015</h4>
+        <div style="padding-left: 20;">
+          The goal of this project is to build machine learning models to predict the winners of 2015 Super Bowl and the College Football Championship using historical data.
+          </br>
+          </br>
+          We have predicted the outcome of football matches entirely using the knowledge of previous game statistics. We have used three different models to do this:
+          <ol>
+            <li>Baseline model :  "Point Score Difference Model". In this model we use the score difference to predict winners of future games.</li>
+            <li>Linear Regression Model: In this model, we use linear regression to predict the point difference for each game.</li>
+            <li>PageRank Model: Here, we model the game data as a graph with nodes as teams and edges as score differences between the teams. We then use PageRank on this game graph to rank all the teams. This ranking is used to predict winners of future games.</li>
+          </ol>
+          </br>
+          More information about the project can be found <a target="_blank" href="http://www3.cs.stonybrook.edu/~skiena/591/final_projects/football/">here</a>.
+          </br>
+          </br>
+          <strong>Detailed Report:</strong> <a href="files/data_science_report.pdf" target="_blank"> Link</a>
+          
+          </br>
+          <strong>Code/IPython Notebooks</strong>
+          <ul>
+            <li>Baseline Models:
+              <ul>
+                <li>Baseline 1: <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/blob/master/nfl/nfl_baseline_1.ipynb">NFL </a>|
+                                         <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/blob/master/college_football/clg_baseline_1.ipynb">College </a>
+                </li>
+                <li>Baseline 2: <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/blob/master/nfl/nfl_baseline_2.ipynb">NFL </a>|
+                                         <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/blob/master/college_football/clg_baseline_2.ipynb">College </a>
+                </li>
+              </ul>    
+            </li>
+            <li>Linear Regression Models:
+              <ul>
+                <li>Paired Features: <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/blob/master/nfl/nfl_linear_regression_paired_version.ipynb">NFL </a>|
+                                         <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/blob/master/college_football/clg_linear_regression_paired_version.ipynb">College </a>
+                </li>
+                <li>Separate Features: <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/blob/master/nfl/nfl_linear_regression_separate_version.ipynb">NFL </a>|
+                                         <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/blob/master/college_football/clg_linear_regression_separate_version.ipynb">College </a>
+                </li>
+                <li>Helper Notebooks: <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/tree/master/nfl">NFL </a>|
+                                         <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/tree/master/college_football">College </a>
+                </li>
+              </ul>
+            </li>
+            <li>Page Rank Model: <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/blob/master/nfl/nfl_pagerank.ipynb">NFL </a>|
+                                         <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/blob/master/college_football/clg_pagerank.ipynb">College </a>
+            </li>
+            <li>Initial Models: <a target="_blank" href="http://nbviewer.ipython.org/github/chetannaik/predict-nfl-champions/tree/master/old_notebook_files/">Notebooks</a>
+            </li>
+          </ul>
+        </div>
+        
+        </br>
+        <h4>3. Predicting Yelp review rating stars from review text</h4>
+        <div style="padding-left: 20;">
+          The goal of this project was to predict reviews' star ratings on Yelp from review text.
+          </br>
+          </br>
+          We built the following models that perform text analysis on review data to predict the rating stars.
+          </br>
+          <ol>
+            <li>Baseline Model: The most common rating, 4 stars, is the rating predicted by this model for all the reviews.</li>
+            <li>Term Frequency Model: In this model we use frequency of word occurrence to predict the review rating.</li>
+            <li>LDA + Sentiment Model: This model predicts rating using Latent Dirichlet Allocation (LDA) with an added sentiment layer by extracting topics and sentiment associated with the review from review text.</li>
+            <li>NMF + Sentiment Model: In this model, we predict review rating using Non-negative Matrix Factorization (NMF) with an added sentiment layer by extracting topics and sentiment associated with the review from review text.</li>
+          </ol>
+          We achieved an accuracy of 61% in predicting review rating stars.
+          </br>
+          </br>
+          <strong>Detailed Report:</strong> <a href="files/data_mining_report.pdf" target="_blank"> Link</a>
+          </br>
+          <strong>Code/IPython Notebook:</strong>
+          <ul>
+            <li><a href="http://nbviewer.ipython.org/github/chetannaik/predict-review-rating/blob/master/Data%20Exploration.ipynb" target="_blank">Data Exploration</a></li>
+            <li><a href="http://nbviewer.ipython.org/github/chetannaik/predict-review-rating/blob/master/Models%20%5BAll%20Models%5D.ipynb" target="_blank">Models [All Models]</a></li>
+            <li><a href="http://nbviewer.ipython.org/github/chetannaik/predict-review-rating/blob/master/Model%20%5BNMF%20Model%5D.ipynb" target="_blank">Models [NMF Model]</a></li>
+          </ul>
+          <strong>Presentation:</strong>
+          </br>
+          <iframe src="https://docs.google.com/presentation/d/19AlHk8KRQs3wUI6pLD7AENMEhdJwMa43dEJxB78CPhQ/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+
+        </br>
+        <h4>4. Predicting facial beauty using Convolutional Neural Network (CNN)</h4>
+        <div style="padding-left: 20;">
+          Aim of this project is, for every image with a face of a human, rate the beauty of the face, using a Convolutional Neural Network (CNN). This is done without considering any landmark features. Thus, detecting the features, training them, as well as testing would be done using CNN.
+          </br>
+          </br>
+          We configured a deep learning CNN using <a href="http://caffe.berkeleyvision.org/" target="_blank">Caffe</a> (a fast framework for deep learning) and trained it to classify faces into one of the 5 classes based on facial beauty.
+          </br>
+          </br>
+          The trained model predicts facial beauty with an accuracy of 50.32%.
+          </br>
+          </br>
+          <strong>Detailed Report:</strong> <a href="files/computer_vision_report.pdf" target="_blank"> Link</a>
+          </br>
+          <strong>Presentation:</strong>
+          </br>
+          <iframe src="https://docs.google.com/presentation/d/1ibiqRUbZvzrjclYVhk8ex1iTKwjXa7YMN1sOvVFZFm8/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+
+
+      </div>
+      </div>
+      <div class="footer">
+        <div style="float: left;">
+          <a target="_blank" href="http://www.stonybrook.edu"><img src="files/sbulogo.gif" alt="Stony Brook University" height="50"></a>
+        </div>
+        <!--
+        <div id="copyright">
+          &copy; Chetan Naik, 2015
+        </div>
+        -->
+    </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

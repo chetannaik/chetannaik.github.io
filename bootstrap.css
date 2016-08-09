@@ -3017,7 +3017,7 @@ select[multiple].input-lg {
           user-select: none;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 .btn:focus,
 .btn:active:focus,
@@ -4968,8 +4968,8 @@ a.label:focus {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  background-color: #777;
-  border-radius: 10px;
+  background-color: #a94442;
+  border-radius: 3px;
 }
 .badge:empty {
   display: none;

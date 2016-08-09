@@ -1,0 +1,88 @@
+
+<link href="https://s3.amazonaws.com/mturk-public/bs30/css/bootstrap.min.css" rel="stylesheet" />
+<section class="container" id="DataCollection" style="margin-bottom: 15px; padding: 10px; font-family: Verdana, Geneva, sans-serif; color: rgb(51, 51, 51);"><!-- Instructions -->
+<div class="panel panel-primary">
+<div class="panel-heading" style="font-size: 0.9em;"><strong>Instructions</strong></div>
+
+<div class="panel-body"><!-- panel-body start -->
+<style type="text/css">p { margin-bottom: 0.1in; line-height: 120%; }
+    ::-webkit-input-placeholder { color: #000; } /* Chrome/Opera/Safari */
+    :-moz-placeholder { color: #000; } /* Firefox 18- */
+    ::-moz-placeholder { color: #000; } /* Firefox 19+ */
+    :-ms-input-placeholder { color: #000; } /* IE 10+ */
+    .form-control { width:200px; }
+    #situation1, #situation2, #situation3, #situation4, #situation5 {
+        .form-control;
+        width:600px;
+    }
+    .demo-form {
+      display: inline;
+      width: 150px;
+      padding: 4px 12px;
+      vertical-align: middle;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #situ1, #situ2, #situ3, #situ4, #situ5 {
+        .demo-form;
+        width:450px;
+    }
+</style>
+<p style="font-size: 0.9em; margin-bottom: 0in; line-height: 100%;">Our goal is to collect knowledge about&nbsp;situations involving&nbsp;<em>processes </em>to help AI systems. In this hit, we want&nbsp;to collect two bits of information about different situations involving the process&nbsp;<strong>evaporation.&nbsp;</strong></p>
+
+<p style="font-size: 0.9em; margin-bottom: 0in; line-height: 100%;">&nbsp;</p>
+
+<pre style="font-size: 0.9em; margin-bottom: 0in; line-height: 100%;">
+<span style="font-size: 0.9em; line-height: 100%;">1. Input -- The main entity that experiences or is affected by evaporation (e.g., ocean).</span>
+
+<span style="font-size: 0.9em; line-height: 100%;">2. Output -- The main outcome of evaporation. This could be the output entity (e.g., water vapor) or any other change, actions or events caused by the process.</span></pre>
+
+<p style="font-size: 0.9em; margin-bottom: 0in; line-height: 100%;">&nbsp;</p>
+
+<p style="font-size: 0.9em; margin-bottom: 0in; line-height: 100%;">&nbsp;</p>
+
+<p style="font-size: 0.9em;">Here are some example pairs for the process&nbsp;<strong>Evaporation</strong></p>
+
+<p style="font-size: 0.9em;"><strong style="line-height: 14.04px; font-size: 0.9em;"><u>Inputs</u>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<u>Outputs</u> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<u>Situation</u></strong></p>
+
+<p style="font-size: 0.9em; margin-bottom: 0.05in; line-height: 100%;"><input class="demo-form" maxlength="35" placeholder="liquid" type="text" />&nbsp;<input class="demo-form" maxlength="35" placeholder="gas" type="text" />&nbsp;<input class="demo-form" id="situ1" maxlength="35" placeholder="When liquid undergoes evaporation&nbsp;it changes to gas." type="text" /></p>
+
+<p style="font-size: 0.9em; margin-bottom: 0.05in; line-height: 100%;"><input class="demo-form" maxlength="35" placeholder="water" type="text" />&nbsp;<input class="demo-form" maxlength="35" placeholder="water vapor" type="text" />&nbsp;<input class="demo-form" id="situ3" maxlength="35" placeholder="When water undergoes evaporation it changes to water vapor." type="text" /></p>
+
+<p style="font-size: 0.9em; margin-bottom: 0.05in; line-height: 100%;"><input class="demo-form" maxlength="35" placeholder="wet cloth" type="text" />&nbsp;<input class="demo-form" maxlength="35" placeholder="dry cloth" type="text" />&nbsp;<input class="demo-form" id="situ4" maxlength="35" placeholder="When a wet cloth undergoes evaporation it becomes dry." type="text" /></p>
+
+<p style="font-size: 0.9em; margin-bottom: 0in; line-height: 100%;"><input class="demo-form" maxlength="35" placeholder="seawater" type="text" />&nbsp;<input class="demo-form" maxlength="35" placeholder="salt" type="text" />&nbsp;<input class="demo-form" id="situ5" maxlength="35" placeholder="When seawater evaporates it leaves salt behind." type="text" /></p>
+
+<p style="font-size: 0.9em;">&nbsp;</p>
+
+<p style="font-size: 0.9em;"><strong>Your Task:</strong></p>
+
+<ul>
+    <li style="font-size: 0.9em;">Provide us with five additional input/output pairs. Provide a sentence that describes the situation involving these input and output pairs.</li>
+    <li style="font-size: 0.9em;">Do not repeat the same examples.</li>
+    <li style="font-size: 0.9em;">Your input and output pairs will be assessed for quality and accuracy. Incorrect inputs and outputs will not be accepted.&nbsp;</li>
+    <li style="font-size: 0.9em;">Think about common situations involving the process. If you are unfamiliar with the process, you are free to use the web or any other resource to find examples of situations or possible input/output pairs.&nbsp;</li>
+    <li style="font-size: 0.9em;">Provide examples such that a high school student when given the sentence you describe will agree with&nbsp;the input and output pairs you provide. We want you to provide a form of knowledge that many will agree with, rather than having uncommon interpretations of situations.</li>
+</ul>
+</div>
+</div>
+
+<div id="template1">
+<h4 style="font-size: 0.9em;">&nbsp;<u>Evaporation</u></h4>
+
+<p style="font-size: 0.9em;">&nbsp;<input class="form-control" id="input1" maxlength="35" name="input1" placeholder="Input 1" required="" style="display:inline;" type="text" />&nbsp;&nbsp;<input class="form-control" id="output1" maxlength="35" name="output1" placeholder="Output 1" required="" style="display:inline;" type="text" />&nbsp;&nbsp;<input class="form-control" id="situation1" maxlength="240" name="situation1" placeholder="Situation 1" required="" style="display:inline;" type="text" /></p>
+
+<p style="font-size: 0.9em;">&nbsp;<input class="form-control" id="input2" maxlength="35" name="input2" placeholder="Input 2" required="" style="display:inline;" type="text" />&nbsp;&nbsp;<input class="form-control" id="output2" maxlength="35" name="output2" placeholder="Output 2" required="" style="display:inline;" type="text" />&nbsp;&nbsp;<input class="form-control" id="situation2" maxlength="240" name="situation2" placeholder="Situation 2" required="" style="display:inline;" type="text" /></p>
+
+<p style="font-size: 0.9em;">&nbsp;<input class="form-control" id="input3" maxlength="35" name="input3" placeholder="Input 3" required="" style="display:inline;" type="text" />&nbsp;&nbsp;<input class="form-control" id="output3" maxlength="35" name="output3" placeholder="Output 3" required="" style="display:inline;" type="text" />&nbsp;&nbsp;<input class="form-control" id="situation3" maxlength="240" name="situation3" placeholder="Situation 3" required="" style="display:inline;" type="text" /></p>
+
+<p style="font-size: 0.9em;">&nbsp;<input class="form-control" id="input4" maxlength="35" name="input4" placeholder="Input 4" required="" style="display:inline;" type="text" />&nbsp;&nbsp;<input class="form-control" id="output4" maxlength="35" name="output4" placeholder="Output 4" required="" style="display:inline;" type="text" />&nbsp;&nbsp;<input class="form-control" id="situation4" maxlength="240" name="situation4" placeholder="Situation 4" required="" style="display:inline;" type="text" /></p>
+
+<p style="font-size: 0.9em;">&nbsp;<input class="form-control" id="input5" maxlength="35" name="input5" placeholder="Input 5" required="" style="display:inline;" type="text" />&nbsp;&nbsp;<input class="form-control" id="output5" maxlength="35" name="output5" placeholder="Output 5" required="" style="display:inline;" type="text" />&nbsp;&nbsp;<input class="form-control" id="situation5" maxlength="240" name="situation5" placeholder="Situation 5" required="" style="display:inline;" type="text" /></p>
+</div>
+<br />
+&nbsp;</section>
+<!-- close container -->
+<style type="text/css">td { font-size:1.0em; padding: 5px 5px
+</style>
+
